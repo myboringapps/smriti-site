@@ -1,6 +1,6 @@
 # smriti-site
 
-Public pages for Smriti on iPhone, iPad and Android, served by GitHub Pages (live) at https://myboringapps.github.io/smriti-site/
+Public pages for Smriti on iPhone, iPad and Android, to be served by GitHub Pages at https://myboringapps.github.io/smriti-site/
 
 - `index.html`: Home
 - `free-and-plus.html`: what Free and Smriti Plus include
