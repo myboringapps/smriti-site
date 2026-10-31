@@ -1,0 +1,83 @@
+:root {
+  --bg: #0B1F22; --card: #13302F; --line: #22474A; --text: #E8F2EF; --muted: #9DB7B4; --accent: #3FB6A8; --gold: #E2B84A;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+header a { color: var(--text); text-decoration: none; font-weight: 700; font-size: 22px; }
+.mark { width: 40px; height: 40px; border-radius: 10px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 36px; }
+nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+p, li { color: #D5E4E1; }
+.muted, .meta { color: var(--muted); font-size: 15px; }
+a { color: var(--accent); }
+.card { background: var(--card); border-radius: 16px; padding: 18px 20px; margin: 20px 0; }
+ul { padding-left: 22px; }
+.hero { text-align: center; padding: 40px 0 8px; }
+.hero .mark { width: 110px; height: 110px; border-radius: 26px; }
+.hero h1 { font-size: 44px; margin-top: 16px; }
+.avail { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 18px 0 4px; }
+.avail span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 15px; font-weight: 600; color: var(--text); }
+.avail span.soon { color: var(--gold); border-color: #5a4a1c; }
+.features { display: grid; gap: 10px; margin: 24px 0; padding: 0; list-style: none; }
+.features li { background: var(--card); border-radius: 14px; padding: 12px 16px; color: var(--text); }
+.links { display: grid; gap: 12px; margin-top: 36px; }
+.links a { display: block; background: var(--card); border-radius: 16px; padding: 16px 20px; color: var(--text); text-decoration: none; font-weight: 600; }
+.links a span { display: block; color: var(--muted); font-weight: 400; font-size: 15px; }
+footer { margin-top: 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+.faq { margin: 8px 0 0; }
+.faq h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 28px 0 8px; }
+.faq details { background: var(--card); border-radius: 14px; margin: 8px 0; }
+.faq summary { list-style: none; cursor: pointer; position: relative; min-height: 48px; padding: 13px 48px 13px 18px; font-weight: 600; color: var(--text); border-radius: 14px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; position: absolute; right: 20px; top: 50%; width: 9px; height: 9px; margin-top: -7px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(45deg); transition: transform 0.2s ease; }
+.faq details[open] summary::after { margin-top: -2px; transform: rotate(-135deg); }
+.faq summary:hover { color: var(--accent); }
+.faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.faq details > p, .faq details > ul { margin: 0; padding: 0 18px 16px; }
+.faq details > ul { padding-left: 40px; }
+.more { margin: 16px 0 0; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin: 16px 0; }
+.gallery figure { margin: 0; background: var(--card); border-radius: 14px; padding: 10px 6px 8px; text-align: center; }
+.gallery img { width: 88px; height: 88px; object-fit: contain; }
+.gallery figcaption { font-size: 14px; font-weight: 600; color: var(--text); margin-top: 2px; }
+.fierce { display: flex; align-items: center; gap: 16px; background: var(--card); border-radius: 16px; padding: 14px 18px; margin: 16px 0; }
+.fierce img { width: 110px; height: 110px; object-fit: contain; }
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 8px; }
+.plan { background: var(--card); border-radius: 16px; padding: 18px 20px; }
+.plan.plus { box-shadow: inset 0 0 0 1.5px var(--accent); }
+.plan h2 { margin: 0 0 4px; font-size: 22px; }
+.plan .price { font-size: 28px; font-weight: 700; color: var(--text); margin: 6px 0 2px; }
+.plan .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.plan p { margin: 6px 0 0; font-size: 15px; }
+.group { margin: 36px 0 0; }
+.group h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.table { background: var(--card); border-radius: 16px; overflow: hidden; }
+.head, .row { display: grid; grid-template-columns: minmax(0, 1fr) 160px 160px; gap: 12px; padding: 13px 18px; align-items: start; }
+.head { font-size: 13px; font-weight: 700; color: var(--muted); padding-top: 12px; padding-bottom: 8px; }
+.row { border-top: 1px solid var(--line); }
+.row .what b { display: block; color: var(--text); font-weight: 600; }
+.row .what span { display: block; color: var(--muted); font-size: 14px; line-height: 1.45; margin-top: 2px; }
+.cell { font-size: 14px; line-height: 1.45; color: #D5E4E1; }
+.yes { color: var(--accent); font-weight: 700; }
+.no { color: #5B7377; font-weight: 700; }
+.k { display: none; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.note { font-size: 14px; color: var(--muted); margin-top: 10px; }
+.callout { background: var(--card); border-left: 3px solid var(--gold); border-radius: 10px; padding: 12px 16px; margin: 20px 0; }
+@media (prefers-reduced-motion: reduce) { .faq summary::after { transition: none; } }
+@media (max-width: 560px) {
+  .plans { grid-template-columns: 1fr; }
+  .head { display: none; }
+  .row { grid-template-columns: 1fr 1fr; }
+  .row .what { grid-column: 1 / -1; }
+  .k { display: block; margin-bottom: 2px; }
+}
+@media (max-width: 480px) { h1 { font-size: 30px; } .hero h1 { font-size: 38px; } .faq summary { padding-left: 16px; } .fierce { flex-direction: column; text-align: center; } }
